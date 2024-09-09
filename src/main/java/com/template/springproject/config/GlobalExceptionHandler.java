@@ -16,16 +16,19 @@ import java.util.NoSuchElementException;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    /**
-     *  handleNoSuchElementException method. <br/>
-     *  Si durante la ejecución se dispara la exception NoSuchElementException
-     *  se captura y se convierte en un objeto personalizado.
-     * @param ex NoSuchElementException
-     * @return ResponseEntity
-     */
-    @ExceptionHandler(NoSuchElementException.class)
-    public ResponseEntity<ApiException> handleNoSuchElementException(NoSuchElementException ex) {
-        ApiException apiException = new ApiException("ERROR", ex.getMessage());
-        return new ResponseEntity<>(apiException, HttpStatus.NOT_FOUND);
+  /**
+   * handleException method. <br>
+   * Si la excepcion producida es de tipo ApiException, entonces se propaga.
+   * Caso contrario se retorna la excepcion original.
+   *
+   * @param ex Exception
+   * @return ResponseEntity
+   */
+  @ExceptionHandler(Exception.class)
+  public ResponseEntity<Exception> handleException(Exception ex) {
+    if (ex instanceof ApiException) {
+      return new ResponseEntity<>(ex, ((ApiException) ex).getStatusCode());
     }
+    return new ResponseEntity<>(ex, HttpStatus.INTERNAL_SERVER_ERROR);
+  }
 }

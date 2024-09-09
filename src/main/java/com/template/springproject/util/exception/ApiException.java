@@ -3,16 +3,18 @@ package com.template.springproject.util.exception;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.http.HttpStatus;
+
+import java.util.List;
 
 @Getter
 @Setter
-public class ApiException{
+@Builder
+public class ApiException extends Exception{
 
     private String code;
-    private String message;
+    private String description;
+    private HttpStatus statusCode;
+    private List<ApiExceptionDetail> apiExceptionDetails;
 
-    public ApiException(String code, String message) {
-        this.code = code;
-        this.message = message;
-    }
 }

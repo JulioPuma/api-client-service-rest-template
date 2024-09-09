@@ -10,9 +10,9 @@
 	</parent>
 
 	<groupId>com.template.springproject</groupId>
-	<artifactId>crud-service-java</artifactId>
+	<artifactId>api-client-service-rest-template</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>base-spring-project</name>
+	<name>api-client-service-rest-template</name>
 	<description>CRUD Implementation using RxJava to test reactive flows.</description>
 
 	<properties>

@@ -1,9 +1,8 @@
 package com.template.springproject.controllers;
 
 import com.template.springproject.model.User;
-import com.template.springproject.services.UserService;
+import com.template.springproject.services.UserResponseService;
 import io.reactivex.rxjava3.core.Completable;
-import io.reactivex.rxjava3.core.Maybe;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Single;
 import lombok.RequiredArgsConstructor;
@@ -11,48 +10,51 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/users-response")
 @RequiredArgsConstructor
 @Slf4j
-public class UserController {
+public class UserResponseController {
 
-    private final UserService userService;
+    private final UserResponseService userResponseService;
 
     @GetMapping("")
     public Observable<User> getUsers() {
-
-        return userService.getUsers();
+        log.info("UserResponseController - getUsers method");
+        return userResponseService.getUsers();
     }
 
     @GetMapping("/{userId}")
     public Single<User> getUser (
             @PathVariable Integer userId) {
-
-        return userService.getUser(userId);
+        log.info("UserResponseController - getUser method");
+        return userResponseService.getUser(userId);
     }
 
     @PostMapping("")
     public Single<User> createUser(
             @RequestBody User user) {
-        return userService.createUser(user);
+        log.info("UserResponseController - createUser method");
+        return userResponseService.createUser(user);
     }
 
     @PutMapping("")
     public Single<User> updateUser(
             @RequestBody User user) {
-        return userService.updateUser(user);
+        log.info("UserResponseController - updateUser method");
+        return userResponseService.updateUser(user);
     }
 
     @PatchMapping("")
     public Single<User> patchUser(
             @RequestBody User user) {
-        return userService.patchUser(user);
+        log.info("UserResponseController - patchUser method");
+        return userResponseService.patchUser(user);
     }
 
     @DeleteMapping("/{userId}")
     public Completable deleteUser(
-            @PathVariable Integer userId
-    ) {
-        return userService.deleteUser(userId);
+            @PathVariable Integer userId) {
+        log.info("UserResponseController - deleteUser method");
+        return userResponseService.deleteUser(userId);
     }
 }

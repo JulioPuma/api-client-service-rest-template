@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
  */
 @Component
 public class MemoryDataBase {
-    private List<User> usersFromDatabase = new ArrayList<>(Util.generateUsers());
+    private final List<User> usersFromDatabase = new ArrayList<>(Util.generateUsers());
     private Integer currentId = usersFromDatabase.size() + 1;
 
     public List<User> findAll() {

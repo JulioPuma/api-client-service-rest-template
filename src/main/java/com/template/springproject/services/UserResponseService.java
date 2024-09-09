@@ -3,22 +3,17 @@ package com.template.springproject.services;
 import com.template.springproject.model.User;
 import com.template.springproject.util.MemoryDataBase;
 import io.reactivex.rxjava3.core.Completable;
-import io.reactivex.rxjava3.core.Maybe;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Single;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class UserService {
+public class UserResponseService {
 
     private final MemoryDataBase memoryDataBase;
 
