@@ -54,7 +54,7 @@ public class UserRequestSenderService {
     public Single<User> updateUser(User user) {
         String url = properties.getDomain()+"/users-response";
         HttpEntity<User> entity = new HttpEntity<>(user, null);
-        ResponseEntity<User> response = restTemplate.exchange(url, HttpMethod.PUT, entity, User.class, new Object());
+        ResponseEntity<User> response = restTemplate.exchange(url, HttpMethod.PUT, entity, User.class);
         return Single.just(response.getBody())
                 .onErrorResumeNext(throwable -> Single.error(ReactiveApiException.ErrorHandler(throwable)));
     }
@@ -63,7 +63,7 @@ public class UserRequestSenderService {
     public Single<User> patchUser(User user) {
         String url = properties.getDomain()+"/users-response";
         HttpEntity<User> entity = new HttpEntity<>(user, null);
-        ResponseEntity<User> response = restTemplate.exchange(url, HttpMethod.PATCH, entity, User.class, new Object());
+        ResponseEntity<User> response = restTemplate.exchange(url, HttpMethod.PATCH, entity, User.class);
         return Single.just(response.getBody())
                 .onErrorResumeNext(throwable -> Single.error(ReactiveApiException.ErrorHandler(throwable)));
     }

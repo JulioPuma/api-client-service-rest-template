@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "66465fa2-eb44-4bd7-ae59-cd53d71b9367",
-		"name": "crud-service-rxjava",
+		"_postman_id": "1276c176-78ca-4659-bd05-89404a7dcd3b",
+		"name": "api-client-service-rest-template",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "4999882"
 	},
@@ -12,14 +12,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users",
+					"raw": "http://localhost:8080/users-request",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"users"
+						"users-request"
 					]
 				}
 			},
@@ -31,14 +31,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users/1",
+					"raw": "http://localhost:8080/users-request/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"users",
+						"users-request",
 						"1"
 					]
 				}
@@ -60,14 +60,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/users",
+					"raw": "http://localhost:8080/users-request",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"users"
+						"users-request"
 					]
 				}
 			},
@@ -88,14 +88,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/users",
+					"raw": "http://localhost:8080/users-request",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"users"
+						"users-request"
 					]
 				}
 			},
@@ -108,7 +108,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"soloActualizoElNombre\",\r\n    \"email\": null\r\n}",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"soloActualizoElNombre\",\r\n    \"email\": null\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -116,14 +116,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/users",
+					"raw": "http://localhost:8080/users-request",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"users"
+						"users-request"
 					]
 				}
 			},
@@ -135,14 +135,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users/1",
+					"raw": "http://localhost:8080/users-request/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"users",
+						"users-request",
 						"1"
 					]
 				}
