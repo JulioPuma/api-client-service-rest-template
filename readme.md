@@ -40,7 +40,7 @@ Extra: Using Exception Handler using @ControllerAdvice and @ExceptionHandler
 
 Click the link below to download the Postman collection:
 
-[Download Postman Collection](docs/crud-service-rxjava.postman_collection.json)
+[Download Postman Collection](docs/api-client-service-rest-template.postman_collection.json)
 
 1. Download the file from the link above.
 2. Open Postman.
