@@ -1,9 +1,10 @@
-#  Rest-Template to call Rest API Service
+#  Using Rest-Template to call Rest API Service
 
 <!-- TOC -->
-* [CRUD service using Spring Reactor And H2](#crud-service-using-spring-reactor-and-h2)
+* [Using Rest-Template to call Rest API Service](#using-rest-template-to-call-rest-api-service)
   * [Description](#description)
-  * [Diagram](#diagram)
+  * [General diagram](#general-diagram)
+  * [Sequence diagram](#sequence-diagram)
   * [Postman Collection](#postman-collection)
   * [Dependencies](#dependencies)
   * [Package](#package)
@@ -19,13 +20,21 @@ Extra: Using Exception Handler using @ControllerAdvice and @ExceptionHandler
 * Framework: SpringBoot 3
 * Dependency management: Maven 3.6.3
 
+<div>
+<img src="docs/markdown/java17-logo.png" alt="logo" style="display: inline-block;margin: 0 10px;width: 100px;height: 50px;background-color: white"/> 
+<img src="docs/markdown/springboot.png" alt="logo" style="display: inline-block;margin: 0 10px;width: 100px;height: 50px;background-color: white"/>
+<img src="docs/markdown/reactiveX.png" alt="logo" style="display: inline-block;margin: 0 10px;width: 100px;height: 50px;background-color: white"/>
+</div>
 
-<img src="docs/markdown/java17-logo.png" alt="logo" style="display: inline-block;margin: 0 10px;width: 100px;height: 50px;background-color: white"/> <img src="docs/markdown/springboot.png" alt="logo" style="display: inline-block;margin: 0 10px;width: 100px;height: 50px;background-color: white"/> <img src="docs/markdown/project-reactor.png" alt="logo" style="display: inline-block;margin: 0 10px;width: 100px;height: 50px;background-color: white"/> <img src="docs/markdown/h2.png" alt="logo" style="display: inline-block;margin: 0 10px;width: 100px;height: 50px;background-color: white"/>
 
 
-## Diagram
+## General diagram
 
-<img src="docs/markdown/Diagrama.svg" alt="logo" style="background-color:white" />
+<img src="docs/markdown/Diagrama-general.svg" alt="logo" style="background-color:white" />
+
+## Sequence diagram
+
+<img src="docs/markdown/Diagrama-Secuencia.svg" alt="logo" style="background-color:white" />
 
 ## Postman Collection
 
@@ -36,7 +45,7 @@ Click the link below to download the Postman collection:
 1. Download the file from the link above.
 2. Open Postman.
 3. Click "Import" in the top left corner.
-4. Select the downloaded `crud-service-reactor-h2.postman_collection.json` file.
+4. Select the downloaded `api-client-service-rest-template.postman_collection.json` file.
 5. You can now test the API endpoints using the provided examples.
 
 ## Dependencies
